@@ -9,7 +9,8 @@ const BigText = (props) => {
     <Text
       {...props}
       style={{
-        fontSize: 25,
+        padding: 5,
+        fontSize:30,
         fontWeight: 600,
         color: black,
         ...props.style,

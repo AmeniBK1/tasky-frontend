@@ -8,13 +8,11 @@ const { white } = colors;
 const StyledView = styled.View`
   flex: 1;
   background-color: ${white};
-  padding: 20px; /* add some padding */
   margin-top: 0px; /* add some margin to the top */
 `;
 
-const MainContainer = (props) => {
+const MainContainerH = (props) => {
   return <StyledView {...props}>{props.children}</StyledView>;
 };
 
-export default MainContainer;
-
+export default MainContainerH

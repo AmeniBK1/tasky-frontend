@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import BigText from "../components/texts/BigText";
 
 const EmailVerification = ({ navigation, route }) => {
-  const { white, accent } = colors;
+  const { white, primary } = colors;
   // code input states
   const MAX_CODE_LENGTH = 4;
   const [code, setCode] = useState("");
@@ -61,31 +61,7 @@ const EmailVerification = ({ navigation, route }) => {
           route={route}
           navigation={navigation}
         />
-        {!verifying && pinReady && (
-          <RegularButton
-            color={white}
-            onPress={handleEmailVerification}
-            disabled={pinReady}
-            loading={verifying}
-          >
-            Verify
-          </RegularButton>
-        )}
-        {!verifying && !pinReady && (
-          <RegularButton
-            color={white}
-            style={{ backgroundColor: accent }}
-            disabled={true}
-            loading={verifying}
-          >
-            Verify
-          </RegularButton>
-        )}
-        {verifying && (
-          <RegularButton disabled={true}>
-            <ActivityIndicator size={"small"} color={white} />
-          </RegularButton>
-        )}
+        
         <ResendTimer
           activeResend={activeResend}
           setActiveResend={setActiveResend}

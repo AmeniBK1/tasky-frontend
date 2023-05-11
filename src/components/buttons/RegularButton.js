@@ -3,10 +3,11 @@ import React from "react";
 import styled from "styled-components/native";
 import { colors } from "../colors";
 import RegularText from "../texts/RegularText";
-const { accent, black } = colors;
+const { primary, white } = colors;
 const ButtonView = styled.TouchableOpacity`
+  deiplay: flex;
   padding: 15px;
-  background-color: ${accent};
+  background-color: ${primary};
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -16,9 +17,14 @@ const ButtonView = styled.TouchableOpacity`
 `;
 const RegularButton = ({ color, ...props }) => {
   return (
-    <ButtonView {...props} onPress={props.onPress} style={{ borderRadius: 20 }}>
+    <ButtonView {...props} onPress={props.onPress} style={{ padding: 30, borderRadius: 30 }}>
       <RegularText
-        style={[{ color: black, fontWeight: 600, ...props?.textStyle }]}
+        style={[{ 
+          color: white,
+          fontSize: 18,
+          fontWeight: 900,
+          ...props?.textStyle 
+          }]}
       >
         {props.children}
       </RegularText>

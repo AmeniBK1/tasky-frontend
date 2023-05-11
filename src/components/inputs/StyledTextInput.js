@@ -1,4 +1,4 @@
-//!This is the input coponents of all forms
+//!This is the input components of all forms
 import React, { useState } from "react";
 import { View, Text } from "react-native";
 import styled from "styled-components/native";
@@ -6,7 +6,7 @@ import { colors } from "../colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import SmallText from "./../texts/SmallText";
 
-const { white, secondary, accent, lightGray, black } = colors;
+const { white, secondary, lightGray, black } = colors;
 
 const RowContainer = styled.View`
   display: flex;
@@ -57,7 +57,7 @@ const StyledTextInput = ({ icon, label, isPassword, errors, ...props }) => {
   return (
     <View>
       <LeftIcon>
-        <MaterialCommunityIcons name={icon} size={30} color={accent} />
+        <MaterialCommunityIcons name={icon} size={30} color={secondary} />
       </LeftIcon>
 
       <SmallText style={{ fontWeight: "600", marginBottom: 5 }}>
@@ -70,7 +70,7 @@ const StyledTextInput = ({ icon, label, isPassword, errors, ...props }) => {
         style={{
           backgroundColor: inputBackgroundColor,
           ...props?.style,
-          borderRadius: 20,
+          borderRadius: 30,
           borderColor: errors ? "red" : secondary,
         }}
         onBlur={customOnBlur}
@@ -98,7 +98,7 @@ const StyledTextInput = ({ icon, label, isPassword, errors, ...props }) => {
           <MaterialCommunityIcons
             name={hidePassword ? "eye-off" : "eye"}
             size={30}
-            color={accent}
+            color={secondary}
           ></MaterialCommunityIcons>
         </RightIcon>
       )}

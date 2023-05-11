@@ -5,7 +5,7 @@ import { colors } from "../colors";
 import { useDispatch } from "react-redux";
 import { VerifyOTPlModifyPasswordAction } from "./../../_actions/logicHandlerActions/authActions";
 
-const { secondary, black, accent } = colors;
+const { secondary, black, primary } = colors;
 const StyledCodeSection = styled.View`
   flex: 1;
   align-items: center;
@@ -40,7 +40,7 @@ const CodeInputInText = styled.Text`
   color: ${black};
 `;
 const CodeInputFocuced = styled(CodeInputText)`
-  border-color: ${accent};
+  border-color: ${primary};
 `;
 
 const CodeInput = ({

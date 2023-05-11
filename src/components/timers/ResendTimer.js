@@ -6,7 +6,7 @@ import SmallText from "./../texts/SmallText";
 import PressableText from "./../texts/PressableText";
 
 import RowContainerSpaceBetween from "./../containers/RowContainerSpaceBetween";
-const { accent, fail, success, black } = colors;
+const { primary, fail, success, black } = colors;
 
 const ResendTimer = ({
   activeResend,
@@ -25,7 +25,7 @@ const ResendTimer = ({
   `;
 
   const ResendText = styled.Text`
-    color: ${accent}
+    color: ${primary}
       ${(props) => {
         const { resendStatus } = props;
 

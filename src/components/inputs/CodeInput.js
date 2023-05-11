@@ -5,7 +5,7 @@ import { colors } from "../colors";
 import { useDispatch } from "react-redux";
 import { VerifyOTPAction } from "./../../_actions/logicHandlerActions/authActions";
 
-const { secondary, black, accent } = colors;
+const { secondary, black, primary } = colors;
 
 //?This is the styled components of the otp verification
 
@@ -41,7 +41,7 @@ const CodeInputInText = styled.Text`
   color: ${black};
 `;
 const CodeInputFocuced = styled(CodeInputText)`
-  border-color: ${accent};
+  border-color: ${primary};
 `;
 
 const CodeInput = ({

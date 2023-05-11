@@ -19,6 +19,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import store from "../_actions/store";
 import { Logout } from "./../_actions/logicHandlerActions/authActions";
 import { useSelector } from "react-redux";
+import ClientScreen from "../screens/ClientScreen";
 
 const Stack = createStackNavigator();
 const { white, black } = colors;
@@ -132,9 +133,16 @@ const RootStack = () => {
               name="HomePage"
               component={HomePage}
               options={{
-                headerTitle: "Home Page",
+                headerTitle: "",
               }}
             />
+            <Stack.Screen name="ClientScreen" 
+            component={ClientScreen} 
+            options={{
+              headerShown: false,     
+                   }}
+            />
+
           </>
         )}
       </Stack.Navigator>

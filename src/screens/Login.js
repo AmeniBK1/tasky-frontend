@@ -9,6 +9,7 @@ import BigText from "../components/texts/BigText";
 import PressableText from "../components/texts/PressableText";
 import { useDispatch } from "react-redux";
 import { LoginAction } from "../_actions/logicHandlerActions/authActions";
+import ClientScreen from "./ClientScreen";
 import * as Yup from "yup";
 
 const LoginSchema = Yup.object().shape({
@@ -28,20 +29,21 @@ const Login = ({ navigation }) => {
   };
 
   return (
-    <MainContainer>
+    <MainContainer >
       <ScrollView showsVerticalScrollIndicator={false}>
         <BigText
           style={{
             marginBottom: 25,
+            textAlign: "center",
           }}
         >
-          Login to check your cab
+          Welcome back !
         </BigText>
         <Formik
           initialValues={{ email: "", password: "" }}
           validationSchema={LoginSchema}
           onSubmit={(values, { setSubmitting }) => {
-            dispatch(LoginAction(values, setSubmitting, moveTo, t));
+            moveTo("ClientScreen")
           }}
         >
           {({
@@ -62,7 +64,7 @@ const Login = ({ navigation }) => {
                 autoCapitalize="none"
                 onChangeText={handleChange("email")}
                 onBlur={handleBlur("email")}
-                style={{ marginBottom: 25 }}
+                style={{ marginBottom: 25 , borderRadius: 59, }}
                 value={values.email}
                 errors={touched.email && errors.email}
               />
@@ -82,7 +84,10 @@ const Login = ({ navigation }) => {
               />
 
               {!isSubmitting && (
-                <RegularButton onPress={handleSubmit}>Login</RegularButton>
+                <RegularButton
+                 onPress={handleSubmit}>
+                  Login
+                </RegularButton>
               )}
               {isSubmitting && (
                 <RegularButton disabled={true}>

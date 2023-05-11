@@ -12,6 +12,9 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import jwt_decode from "jwt-decode";
 import Toast from "react-native-toast-message";
+import SignUp from "./src/screens/Signup";
+import ClientScreen from "./src/screens/ClientScreen";
+import Login from "./src/screens/Login";
 export default function App() {
   //get jwt item from asynsStorage
 
@@ -30,7 +33,7 @@ export default function App() {
   });
   return (
     <Provider store={store}>
-      <RootStack />
+      <RootStack/>
       <StatusBar style="auto" />
       <Toast />
     </Provider>

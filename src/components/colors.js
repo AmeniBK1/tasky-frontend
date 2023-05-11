@@ -1,7 +1,8 @@
 //!All the colors of our app
 export const colors = {
-  secondary: "#808080",
-  accent: "#FFCC00",
+  primary: "#723DD4",
+  secondary: "#000",
+  accent: "#723DD4",
   lightGray: "#6B7280",
   white: "#fff",
   black: "#000",
